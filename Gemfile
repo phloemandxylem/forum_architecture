@@ -20,5 +20,6 @@ group :production do
    gem 'jbuilder', '~> 2.0'
 
  group :development, :test do
+   gem 'rspec-rails', '~> 3.0'
    gem 'byebug'
  end
