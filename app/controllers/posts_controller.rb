@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
 before_action :require_sign_in, except: :show
+before_action :authorize_user, except: [:show, :new, :create]
 
  def show
       @post = Post.find(params[:id])
@@ -40,7 +41,7 @@ before_action :require_sign_in, except: :show
                   flash.now[:alert] = "There was an error saving the post. Please try again."
                   render :edit
             end
-      end
+        end
 
       def destroy
            @post = Post.find(params[:id])
@@ -52,11 +53,17 @@ before_action :require_sign_in, except: :show
                render :show
          end
       end
-   end
 
       private
+      def post_params
+            params.require(:post).permit(:title, :body)
+      end
+      def authorize_user
+           post = Post.find(params[:id])
 
-            def post_params
-                  params.require(:post).permit(:title, :body)
-            end
-      
+     unless current_user == post.user || current_user.admin?
+       flash[:alert] = "You must be an admin to do that."
+       redirect_to [post.topic, post]
+     end
+   end
+ end
