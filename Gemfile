@@ -19,6 +19,7 @@ group :production do
    gem 'jquery-rails'
    gem 'turbolinks'
    gem 'jbuilder', '~> 2.0'
+   gem 'figaro', '1.0'
 
  group :development, :test do
    gem 'rspec-rails', '~> 3.0'
