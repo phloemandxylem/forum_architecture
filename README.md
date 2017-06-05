@@ -1,11 +1,11 @@
 
-Rails built Reddit sorcery using Rails 4.2.5. More to come. 
+Rails built Reddit using Rails 4.2.5. 
 
-## Five critical steps of Derinkuyu
+
+# Two critical steps of Derinkuyu
 1. In terminal - run `rails s`
-2. Server -  `localhost:3000` 
-3. Drink tea 
-4. Finish tea 
-5. Meditate accordingly
+2. Browser: `localhost:3000` 
+
+This was built as a practice in MVC architecture using Ruby. 
 
 
