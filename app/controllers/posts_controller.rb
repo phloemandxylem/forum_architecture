@@ -3,8 +3,13 @@ class PostsController < ApplicationController
 before_action :require_sign_in, except: :show
 before_action :authorize_user, except: [:show, :new, :create]
 
+  def index
+    @posts = Post.all
+  end
+
  def show
       @post = Post.find(params[:id])
+      @topic = Topic.find(params[:topic_id])
   end
 
   def new

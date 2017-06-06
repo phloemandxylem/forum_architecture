@@ -1,6 +1,7 @@
-class Collaborator < ActiveRecord::Base
+class Topic < ActiveRecord::Base
   belongs_to :user
   belongs_to :wiki
+  has_many :posts
 
   delegate :email, to: :user, prefix: true
 

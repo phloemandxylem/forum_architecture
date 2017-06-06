@@ -4,7 +4,6 @@ class UsersController < ApplicationController
       end
 
       def create
-
            @user = User.new
            @user.name = params[:user][:name]
            @user.email = params[:user][:email]
@@ -12,7 +11,7 @@ class UsersController < ApplicationController
            @user.password_confirmation = params[:user][:password_confirmation]
 
            if @user.save
-                 flash[:notice] = "Welcome to Bloccit #{@user.name}!"
+                 flash[:notice] = "Welcome to Derinkuyu #{@user.name}!"
                  create_session(@user)
                  redirect_to root_path
            else
@@ -23,5 +22,6 @@ class UsersController < ApplicationController
             def show
                   @user = User.find(params[:id])
                   @posts = @user.posts.visible_to(current_user)
+                  @topic = Topic.find(params[:topic_id])
             end
       end
