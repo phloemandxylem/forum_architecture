@@ -8,13 +8,13 @@ class TopicsController < ApplicationController
         @topics = Topic.all
       end
 
-      def show
-        @topics = Topic.all
-        @topics = Topic.find(params[:id])
+      def new
+        @topic = Topic.new
       end
 
-      def new
-            @topic = Topic.new
+      def show
+        @topics = Topic.all
+        @topic = Topic.find(params[:id])
       end
 
       def create
