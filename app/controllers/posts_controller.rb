@@ -63,7 +63,7 @@ before_action :authorize_user, except: [:show, :new, :create]
       def post_params
             params.require(:post).permit(:title, :body)
       end
-      
+
       def authorize_user
            post = Post.find(params[:id])
 
