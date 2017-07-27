@@ -2,12 +2,13 @@
 
 ## User Story:
 Create an account, post topics, comment, and favorite said topics.
-Seeded Data was used for test cases.
+Seeded data was used for test cases.
 
 ![Derinkuyu1](app/assets/images/Derinkuyu1.png)
 
 ## Developer Story:
-Derinkuyu was an an exercise in database migration, indices, Active Record associations, and scope, with stand-alone migration specifically being used to scope posts to users.
+Derinkuyu was an an exercise in database migration, indices, Active Record associations, and scope.
+Stand-alone migration specifically being used to scope posts to users.
 
 ### Run the Application:
 0. clone
