@@ -8,7 +8,6 @@ Seeded data was used for test cases.
 
 ## Developer Story:
 Derinkuyu was an an exercise in database migration, indices, Active Record associations, and scope.
-Stand-alone migration specifically being used to scope posts to users.
 
 ### Run the Application:
 0. clone
